@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/moneyproduct.css">
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!--头部标题ST-->
+    <header class="mmp">
+            <div class="return"><a href="moneyctrl.html"></a></div>
+           <h2>国内折扣</h2>
+       
+        <div class="app">
+            <img src="images/header_app.png" alt="">
+        </div>
+    </header>
+    <!--头部标题ED-->
+
+    <!--折扣商品列表 ST-->
+    <section class="discount">
+        <!--<div class="entry">
+            <h3>移动端凑单品：海天 鲜味 生抽 1.28L</h3>
+            <h4>
+                <span>京东商城</span>
+                <span>0-25 14:10</span>
+                <span>小编烟火 / 慢慢买</span>
+            </h4>
+        </div>
+        <div class="introduce">
+        <img src="http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg">
+        海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成以及小麦发酵而成以及小麦发酵而成 ，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。  
+        <p>目前京东商城移动端售价10.9元，不错的凑单品，刚需可入，规格1.28L。</p>
+        </div>
+        <div class="bgimg">
+            <img src="http://img10.360buyimg.com/n1/g13/M08/03/19/rBEhVFHUCF0IAAAAAAE6WA-oszMAAAvVQFF8CgAATpw626.jpg" alt="">
+        </div>-->
+        <!--<div class="commtab">
+
+        </div>-->
+    </section>
+    <!--折扣商品列表 ED-->
+
+
+    <!--前往购买 ST-->
+    <section class="gobuy">
+        <input type="bottom" name="" value="前往购买">
+
+        <div class="buypic">
+            <img src="images/mmbweixin2.png" alt="">
+        </div>
+    </section>
+    
+    
+    <!--前往购买 ED-->
+
+    <!--评论专区 ST-->
+    <section class="prefecture">
+        <div class="criticism">
+
+        </div>
+    </section>
+    
+    <!--评论专区 ED-->
+
+<!--登录.注册.返回顶部 ST-->
+     <section class="message clearfix">
+         <ul>
+            <li><a href="">登录</a></li>
+            <li class="borsty"><a href="" >注册</a></li>
+            <li class="lastli">
+                <a href="">
+                    <span class="top"></span>
+                    <span>返回顶部</span>
+                </a>
+            </li>    
+         </ul>
+
+     </section>
+     <!--登录.注册.返回顶部 ED-->
+  
+<!--底部文字 手机下载APP ST-->
+     <section class="textapp clearfix">
+         <div class="text">
+            <span ><a href="#" class="textred">手机app下载</a></span>
+            <span><a href="#">慢慢买手机版</a></span>
+            <span><a href="#" class="textgary">--掌上比价平台</a></span>
+         </div>
+         <div class="manmanmai">m.manmanbuy.com</div>
+         
+        
+     </section>
+     <!--底部文字 手机下载APP ED-->
+
+
+   
+  
+    
+
+
+
+<script src="js/moneyproduct.js"></script>
+
+<script type="text/html" id="tpl">
+    {{each result as i}}
+    <div class="entry">
+        <h3>{{i.productName}}</h3>
+        <h4>
+            <span>{{i.productFrom}}</span>
+            <span>{{i.productTime}}</span>
+            <span>{{i.productTips}}</span>
+        </h4>
+    </div>
+    <div class="introduce">
+    {{#i.productImgSm}}
+    {{i.productInfo2}}
+    <!--<p>{{i.productInfo2}}</p>-->
+    </div>
+    <div class="bgimg">
+       {{#i.productImgSm}}
+    </div>
+   
+    <div class="commtab">
+        
+    </div>
+     {{/each}}
+</script>
+
+</body>
+
+</html>

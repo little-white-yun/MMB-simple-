@@ -1,0 +1,161 @@
+@import "./basex";
+
+/*------------ 滑动导航 ST ------------*/
+.navlist{
+    margin-bottom:50*@rem;
+    #wrapper {
+        position:relative;
+        height: 76*@rem;;
+        width: 100%;
+        overflow: hidden;
+        margin:0 auto;
+        .scroller {
+            position:absolute;
+            li {
+                height: 1rem;
+                color:#000;
+                float: left;
+                line-height: 65*@rem;
+                font-size: 26*@rem;
+                text-align: center;
+                margin-left:50*@rem;
+                a {
+                    color:#000;
+                    display:block;
+                    margin:0 .3*@rem;
+                    position: relative;
+                }
+            }
+        }   
+    }
+    
+}
+
+.active{
+    color:#f4483e;
+    border-bottom:2px solid #f4483e;
+    
+}
+/*------------ 滑动导航 ED ------------*/
+
+
+/*------------ 商品列表样式 ST ------------*/
+.conlist {
+    .conpre {
+        width:100%;
+        height:260*@rem;
+        padding:4*@rem 12*@rem;
+        margin-bottom:50*@rem;
+        
+
+       
+        img {
+            float:left;
+            width:258*@rem;
+            height:258*@rem;
+        }
+         .litext {
+           font-size:30*@rem;
+           color:#000;
+           padding-left:280*@rem;
+
+           .youhui {
+                color:#fc353a;
+                margin-top:25*@rem;
+            
+                i {
+                    font-style: normal;
+                    font-size:32*@rem;
+                    color:#fc353a;
+                }
+                em {
+                    font-size:12*@rem;
+                    color:#fc353a;
+                    margin-left:7*@rem;
+                }
+                del {
+                    font-size:14*@rem;
+                    color:#a8a6ab;
+                    margin-left:25*@rem;
+                }
+           
+            }
+           
+        }
+        .bar {
+            height:30*@rem;
+            position:relative;
+            margin-top:0px;
+            background:rgba(255,1,1,0);
+            width:325*@rem;
+            margin-left:280*@rem;
+
+            i {
+                position:absolute;
+                top:0px;
+                font-style:normal;
+                width:165*@rem;
+                border:2px solid #fc353a;
+                height:30*@rem;
+                border-radius:12*@rem;
+                text-align: center;
+                background-color:#ffb7b7;
+                margin-top:10*@rem;
+                
+
+                em {
+                   float:left;
+                   height:26*@rem;
+                   background-color:#fc353a;
+                   border-radius:11*@rem;
+                }
+                span {
+                    position:absolute;
+                    left:41px;
+                    top:2px;
+                    color:#fff;
+                }
+
+            }
+            b {
+                position:absolute;
+                top:-3*@rem;
+                right:0px;
+                font-size:24*@rem;
+                color:#fc353a;
+                font-style:normal;
+            }
+        }
+        .btnanniu {
+            margin-top:17*@rem;
+            :nth-child(1){
+                display: inline-block;
+                width:212*@rem;
+                height:47*@rem;
+                border:2px dashed #ed7879;
+                text-align:center;
+                line-height:47*@rem;
+                font-size:24*@rem;
+                color:#f0674c;
+                margin-left:20*@rem;
+                margin-top:10*@rem;
+            }
+            :nth-child(2){
+                width:116*@rem;
+                height:57*@rem;
+                border-radius:8*@rem;
+                background-color:#ff5e5d;
+                font-size:24*@rem;
+                color:#fff;
+                display: inline-block;
+                line-height:57*@rem;
+                text-align: center;
+                margin-left:108*@rem;
+            }
+        }
+    }
+}
+
+
+
+/*------------ 商品列表样式 ED ------------*/

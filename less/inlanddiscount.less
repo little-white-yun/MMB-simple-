@@ -1,0 +1,47 @@
+@import "./basex";
+
+/*------------ 国内折扣商品列表 ST ------------*/
+.domestic {
+    margin-bottom:80*@rem;
+    .discount {
+        ul {
+            li {
+                padding:45*@rem 48*@rem 24*@rem 37*@rem;
+                width:50%;
+                float:left;
+                border-right:1px solid #ccc;
+                border-bottom:1px solid #ccc;
+                .img {
+                    img {
+                        width:310*@rem;
+                        height:283*@rem;
+                    }
+                }
+                .title {
+                    height:60*@rem;
+                    font-size:24*@rem;
+                    color:#000;
+                    margin-top:10*@rem;
+                    font-weight:bold;
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+
+                }
+                .quotation {
+                    font-size:26*@rem;
+                    color:#ff6301;
+                    margin-top:15*@rem;
+                }
+                .while {
+                    font-size:24*@rem;
+                    color:#a09992;
+                    margin-top:30*@rem;
+                }
+            }
+        }
+    }
+}
+/*------------ 国内折扣商品列表 ED ------------*/

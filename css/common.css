@@ -1,0 +1,454 @@
+@charset "utf-8";
+/*------------- S reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f7f7f7;
+  color: #5a5a5a;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*在移动端特殊的设置*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+ins,
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+a:hover {
+  color: #5a5a5a;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+/*------------- E  reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+/*------------- S common css  也就是我们公用的css -------------*/
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.w33 {
+  width: 33.3333%;
+}
+.w50 {
+  width: 50%;
+}
+.iconnone {
+  display: none;
+}
+/*------------- E common css  也就是我们公用的css -------------*/
+/*-------------- S 字体图标库 -------------*/
+@font-face {
+  font-family: "miconfont";
+  src: url('../font/miconfont.eot?t=1480476053297');
+  /* IE9*/
+  src: url('../font/miconfont.eot?t=1480476053297#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/miconfont.woff?t=1480476053297') format('woff'), /* chrome, firefox */ url('../font/miconfont.ttf?t=1480476053297') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/miconfont.svg?t=1480476053297#miconfont') format('svg');
+  /* iOS 4.1- */
+}
+.micon {
+  font-family: 'miconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.micon-arrow::before {
+  content: '\e65e';
+}
+.micon-arrow::before {
+  content: '\e65f';
+}
+/* --------慢慢买首页顶部及搜索部分ST ------ */
+.mmp {
+  height: 1.3333rem;
+  background-color: #ff841d;
+  position: relative;
+}
+.mmp .logo {
+  width: 4.946543rem;
+  height: 0.66665rem;
+  position: absolute;
+  top: 0.306659rem;
+  left: 0.426656rem;
+}
+.mmp .logo img {
+  width: 4.946543rem;
+  height: 0.66665rem;
+}
+.mmp .app {
+  width: 0.906644rem;
+  height: 0.906644rem;
+  position: absolute;
+  top: 0.159996rem;
+  right: 0.173329rem;
+}
+.mmp .app img {
+  width: 0.906644rem;
+  height: 0.906644rem;
+}
+.find .search {
+  height: 1.3333rem;
+  position: relative;
+}
+.find .search input {
+  border: 1px solid #e6e6e6;
+  position: absolute;
+  top: 0.26666rem;
+  border-radius: 21px;
+}
+.find .search .inp {
+  height: 0.826646rem;
+  width: 7.59981rem;
+  background: #f1f1f1;
+  left: 0.26666rem;
+  line-height: 62px;
+  text-indent: 20px;
+  font-size: 0.346658rem;
+  color: #5a5a5a;
+}
+.find .search .btn {
+  width: 1.73329rem;
+  height: 0.79998rem;
+  background: #ff841d;
+  right: 0.26666rem;
+  font-size: 0.426656rem;
+  color: #fff;
+}
+.bar {
+  height: 0.26666rem;
+  background: #f1f1f1;
+  margin-top: 0.26666rem;
+}
+.sale .item {
+  width: 100%;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0.39999rem 0;
+}
+.sale .item a {
+  display: block;
+}
+.sale .item .i-left {
+  height: 2.706599rem;
+  width: 2.706599rem;
+}
+.sale .item .i-left img {
+  height: 2.706599rem;
+  width: 2.706599rem;
+}
+.sale .item .i-right {
+  width: 6.693166rem;
+  margin-left: 0.199995rem;
+}
+.sale .item .i-right h4 {
+  font-size: 18px;
+}
+[data-dpr='2'] .sale .item .i-right h4 {
+  font-size: 36px;
+}
+[data-dpr="3"] .sale .item .i-right h4 {
+  font-size: 54px;
+}
+.sale .item .i-right h4 .price {
+  color: #ff6c00;
+}
+.sale .item .i-right :nth-child(2),
+.sale .item .i-right :nth-child(3) {
+  display: inline-block;
+  margin-top: 0.879978rem;
+  font-size: 14px;
+}
+[data-dpr='2'] .sale .item .i-right :nth-child(2),
+[data-dpr='2'] .sale .item .i-right :nth-child(3) {
+  font-size: 28px;
+}
+[data-dpr="3"] .sale .item .i-right :nth-child(2),
+[data-dpr="3"] .sale .item .i-right :nth-child(3) {
+  font-size: 42px;
+}
+.sale .item .i-right :nth-child(3) {
+  float: right;
+}
+/* --------慢慢买首页顶部及搜索部分ED ------ */
+/*------------ 登录.注册.返回顶部 ST ------------*/
+.message {
+  height: 0.893311rem;
+  background-color: #efefef;
+}
+.message .borsty {
+  border-right: 1px solid #c5c5c5;
+  border-left: 1px solid #c5c5c5;
+}
+.message .lastli {
+  width: 3.9999rem;
+}
+.message ul {
+  width: 100%;
+  height: 0.866645rem;
+  border: 1px solid #c5c5c5;
+  border-left: 0;
+  border-right: 0;
+}
+.message ul li {
+  width: 2.999925rem;
+  float: left;
+  line-height: 0.866645rem;
+  font-size: 0.39999rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.message ul li .top {
+  width: 0.479988rem;
+  height: 0.439989rem;
+  display: inline-block;
+  background: url("../images/top.jpg");
+  background-size: 0.479988rem 0.439989rem;
+}
+/*------------ 登录.注册.返回顶部 ED ------------*/
+/*------------ 底部文字 手机下载APP ST ------------*/
+.textapp {
+  height: 0.333325rem;
+  margin-top: 0.453322rem;
+  background-color: #efefef;
+}
+.textapp .text {
+  text-align: center;
+}
+.textapp .text .textred {
+  color: #fe0801;
+}
+.textapp .text a {
+  font-size: 0.319992rem;
+  color: #04040c;
+}
+.textapp .text .textgary {
+  color: #7c7f81;
+}
+.textapp .manmanmai {
+  font-size: 0.239994rem;
+  text-align: center;
+  margin-top: 0.159996rem;
+  color: black;
+}
+/*------------ 底部文字 手机下载APP ED ------------*/
+/*------------ 上一页 下一页按钮样式 ST ------------*/
+.bt {
+  text-align: center;
+}
+.bt .page {
+  width: 2.159946rem;
+  height: 0.893311rem;
+  background: linear-gradient(to bottom, #f1f1f1, #d7d7d7);
+  border: 0px;
+  border-bottom: 1px solid #a5a5a5;
+  border-radius: 10px;
+  font-size: 0.346658rem;
+  text-align: center;
+}
+.bt .sel {
+  width: 2.39994rem;
+  height: 0.946643rem;
+  font-size: 0.319992rem;
+  text-align: center;
+  border: 1px solid #bababa;
+  padding: 8px 0.199995rem;
+  margin: 0.26666rem 1.19997rem;
+}
+/*------------ 上一页 下一页按钮样式 ED ------------*/
+/*------------ 详情页导航部分 ST ------------*/
+.nav {
+  height: 0.999975rem;
+  width: 100%;
+  border: 1px solid #c9c9c9;
+  border-right: 0;
+  border-left: 0;
+  background: linear-gradient(to bottom, #ffffff, #eeeeee);
+  position: relative;
+}
+.nav .detail {
+  width: 6.59986rem;
+  height: 0.359991rem;
+  font-size: 0.359991rem;
+  font-weight: bold;
+  margin-top: 0.279993rem;
+  margin-left: 0.346658rem;
+}
+.nav button {
+  width: 1.59996rem;
+  height: 0.733315rem;
+  border-radius: 11px;
+  border: 1px solid #d4d4d4;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#d7d7d7), to(#f5f5f5));
+  box-shadow: 0 1px 2px #888;
+  position: absolute;
+  right: 0.186662rem;
+  top: 0.13333rem;
+  font-size: 0.39999rem;
+}
+/*------------ 详情页导航部分 ED ------------*/
+/*------------ 头部标题 ST ------------*/
+.mmp {
+  text-align: center;
+  line-height: 1.19997rem;
+  position: relative;
+}
+.mmp .return {
+  width: 26px;
+  height: 53px;
+  background-color: black;
+  top: 0.199995rem;
+  left: 0.39999rem;
+  position: absolute;
+  background: url("../images/left.png") no-repeat 0px 0px;
+}
+.mmp .return a {
+  display: inline-block;
+  width: 26px;
+  height: 53px;
+}
+.mmp h2 {
+  display: inline-block;
+  font-size: 0.559986rem;
+  color: #fff;
+}
+/*------------ 头部标题 ED ------------*/
+/*------------ 返回顶部 ST ------------*/
+.moveTop {
+  position: fixed;
+  font-size: 1.19997rem;
+  bottom: 10px;
+  right: 0px;
+  color: rgba(240, 2, 2, 0.5);
+}
+.moveTop a {
+  width: 1.06664rem;
+  height: 1.06664rem;
+  display: inline-block;
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+}
+/*------------ 返回顶部 ED ------------*/
+.show {
+  display: block;
+}
+.hidden {
+  display: none;
+}

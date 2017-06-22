@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!--头部标题ST-->
+    <header class="mmp">
+        <div class="logo">
+            <img src="images/header_logo.png" alt="">
+        </div>
+        <div class="app">
+            <img src="images/header_app.png" alt="">
+        </div>
+    </header>
+    <!--头部标题ED-->
+
+    <!--搜索部分 ST-->
+    <section class="find">
+        <div class="search">
+            <input type="text" name="" value="请输入你想比价的商品" class="inp">
+            <input type="button" value="搜索" class="btn">
+        </div>
+      
+    </section>
+     <!--搜索部分 ED-->
+
+
+    <!--链接标题样式 ST-->
+    <section class="titsty">
+        <div class="headline">
+            <p><a href="index.html">首页 ></a> 全部分类 ></p>
+        </div>
+        
+    </section>
+   <div class="band">平板电视哪个牌子好</div>
+
+
+    
+    
+    <!--链接标题样式 ED-->
+
+     <!--商品列表样式-->
+     <section class="shoplist">
+         <!--<ul class = "commodity">
+             <li>
+                 <div class="hot">1</div>
+                 <div class="hottext">
+                     <p>三星平板电视</p>
+                     <p class="inter">30天全网销售：242408件</p>
+                 </div>
+                 <div class="right iconfont icon-icon"></div>
+             </li>
+         </ul>-->
+         
+     </section>
+
+<div class="band">平板电视产品销量排行</div>
+
+
+   <!--折扣商品列表 ST-->
+    <section class="sale">
+        <!--<ul id="onsale">
+            <li class="item">
+                <a href="#" class="clearfix">
+                    <div class="i-left f-left">
+                        <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt=\"移动端凑单品：海天 鲜味 生抽 1.28L\">
+                    </div>
+                    <div class="i-right f-left">
+                        <h4>移动端凑单品：海天 鲜味 生抽 1.28L</h4>
+                        <span class="price">￥1999.00</span>
+                        <div class="comment">
+                            <span class="pricenum">报价(7)</span>
+                            <span class="comment1">评论(7)</span>
+                        </div>
+                    
+                    </div>
+                </a>
+            </li>
+        </ul>-->
+    </section>
+    
+ <!--折扣商品列表 ED-->
+
+
+<!--商品评论 ST-->
+    <section class="criticism clearfix">
+       <!--<div class="top clearfix">
+            <div class="comment clearfix">
+                <img src="http://pro.zuyushop.com:8015/ProPic/201510/Thumb/Thumb_201510001104382491.jpg" alt="">
+                <span>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</span>
+            </div>
+            <div class="context clearfix">
+                <div class="clearfix">
+                    <span class="f-left conname">b***r</span>
+                    <span class="f-right">2016/10/1</span>
+                </div>
+                <p class="concon" style="color:black">使用了一周整体不错，主要是为了看纪录片和足球。装在窗户上有种大鱼缸的感觉哈！清晰度不错色彩也可以，应该说对得起2200的价格！还送了五年乐视会员，看英超所有比赛都free，但乐观乐视内容这块还不太丰富，应为家里也有百事通bestv和小米盒子，比较了下，电影百事通最好，纪录片小米最好，只有体育这块乐视比那两家好，还要多努力啊！电视本身有个不足，音响太差，太山寨了！而且不支持3.5mm接口或红白莲音频输出，害得我折腾半天，必须买光纤音频线</p>
+                <i class="triangle"></i>
+            </div>
+       </div>-->
+    </section>
+<!--商品评论 ED-->
+
+
+
+
+
+  <!--登录.注册.返回顶部 ST-->
+     <section class="message" style="margin-top:40px">
+         <ul>
+            <li><a href="">登录</a></li>
+            <li class="borsty"><a href="" >注册</a></li>
+            <li class="lastli">
+                <a href="">
+                    <span class="top"></span>
+                    <span>返回顶部</span>
+                </a>
+            </li>    
+         </ul>
+
+     </section>
+     <!--登录.注册.返回顶部 ED-->
+     <!--底部文字 手机下载APP ST-->
+     <section class="textapp">
+         <div class="text">
+            <span ><a href="#" class="textred">手机app下载</a></span>
+            <span><a href="#">慢慢买手机版</a></span>
+            <span><a href="#" class="textgary">--掌上比价平台</a></span>
+         </div>
+         <div class="manmanmai">m.manmanbuy.com</div>
+         
+        
+     </section>
+     <!--底部文字 手机下载APP ED--> 
+
+   
+</body>
+<script src= "js/brand.js"></script>
+
+<!--渲染导航-->
+<script type="text/html" id="tpl">
+    {{each result as i }}
+    <ul class = "commodity">
+        <li>
+            <div class="hot">{{i.brandId+1}}</div>
+            <div class="hottext">
+                <p>{{i.brandName}}</p>
+                <p class="inter">{{i.brandInfo}}</p>
+            </div>
+            <div class="right iconfont icon-icon"></div>
+        </li>
+    </ul>
+    {{/each}}
+    </script>
+
+
+
+    <!--渲染列表 -->
+    <script type="text/html" id="tlist">
+        {{each result as i }}
+        <ul id="onsale">
+            <li class="item">
+                <a href="#?id={{i.productId}}" class="clearfix" index="{{i.productId}}">
+                    <div class="i-left f-left">
+                        {{#i.productImg}}
+                    </div>
+                    <div class="i-right f-left">
+                        <h4>{{i.productName}}</h4>
+                        <span class="price" style="margin-top:10px;font-size:18px">{{i.productPrice}}</span>
+                        <div class="comment">
+                            <span class="pricenum" >{{i.productQuote}}</span>
+                            <span class="comment1">{{i.productCom}}</span>
+                           
+                        </div>
+                            <div class="star f-right">
+                            <i class="iconfont icon-houdongfangiconfont31"></i>
+                            <i class="iconfont icon-houdongfangiconfont31"></i>
+                            <i class="iconfont icon-houdongfangiconfont31"></i>
+                            <i class="iconfont icon-houdongfangiconfont31"></i>
+                            <i class="iconfont icon-houdongfangiconfont31"></i>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        
+        {{/each}}
+    </script>
+
+
+    <!--渲染评论-->
+    <script type="text/html" id="con">
+        {{each result as i }}
+            <div class="top clearfix">
+                <div class="comment clearfix suibian">
+                   
+                    <span></span>
+                </div>
+                <div class="context clearfix">
+                    <div class="clearfix">
+                        <span class="f-left conname">{{i.comName}}</span>
+                        <span class="ift iconfont icon-houdongfangiconfont31" style="margin-left:20px;color:orange"></span>
+                        <span class="ift iconfont icon-houdongfangiconfont31"></span>
+                        <span class="ift iconfont icon-houdongfangiconfont31"></span>
+                        <span class="ift iconfont icon-houdongfangiconfont31"></span>
+                        <span class="ift iconfont icon-houdongfangiconfont31"></span>
+                        <span class="f-right">{{i.comTime}}</span>
+                    </div>
+                    <p class="concon" style="color:black">{{i.comContent}}{{i.comFrom}}</p>
+                    <i class="triangle"></i>
+                </div>
+        </div>
+        {{/each}}
+    </script>
+
+</html>

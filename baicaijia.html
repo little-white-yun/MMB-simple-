@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html> 
+<html> 
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="lib/flexible/flexible.js"></script>
+<script src="lib/flexible/flexible_css.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/template.js"></script>
+<script src="lib/iscroll/iscroll.js"></script>
+<link rel="stylesheet" href="css/basex.css">
+<link rel="stylesheet" href="font/iconfont.css">
+<link rel="stylesheet" href="css/common.css">
+<link href="css/baicaijia.css" rel="stylesheet" type="text/css">
+<title>白菜价</title>
+
+</head>
+<body>
+
+<!--头部标题ST-->
+<header class="mmp" style="background:#f4483e">
+		<div class="return"><a href="index.html"></a></div>
+		<h2>白菜价-淘宝内部券</h2>
+	
+	<div class="app">
+		<img src="images/header_app.png" alt="">
+	</div>
+</header>
+<!--头部标题ED-->
+
+<!--导航列表 ST-->
+	<section class="navlist">
+		
+		<div id="wrapper">
+			<div class="scroller">
+				<ul class="listnav">
+					<!--<li data-id={{value.titleId}}>{{value.title}}</li>-->
+				</ul>
+			</div>
+		</div>
+	</section>
+<!--导航列表 ED-->
+
+
+
+<!--商品内容列表 ST-->
+	<section class="conlist clearfix">
+		<!--<div class="conpre">
+			<img src="https://gd2.alicdn.com/imgextra/i4/2559357181/TB2eYawX43X61Bjy0FlXXaGtVXa_!!2559357181.jpg_400x400.jpg">
+			
+			<div class="litext">
+				<span class="b">[包邮]</span>藏源鹿品牌原创设计【羊毛针织】中长大衣
+				<div class="youhui"><i>券后</i><em>¥</em>106.0<del>¥206</del></div>
+			</div>
+			<div class="bar clearfix">
+					<a href="http://shop.m.taobao.com/shop/coupon.htm?seller_id=2213057944&amp;activity_id=8cfb336284b5436b9f2c7c9343fa85f1" class="goquan" target="_blank"></a>
+					<i>
+						<em style="width:75%"></em>
+						<span>75%</span>
+					</i>
+					<b>已领75117张</b>
+			</div>
+		</div>-->
+	</section>
+
+
+<!--商品内容列表 ED-->
+
+
+<i class="moveTop iconfont icon-fanhuidingbu"><a href="#"></a></i>
+
+
+<!--登录.注册.返回顶部 ST-->
+     <section class="message clearfix">
+         <ul>
+            <li><a href="">登录</a></li>
+            <li class="borsty"><a href="" >注册</a></li>
+            <li class="lastli">
+                <a href="">
+                    <span class="top"></span>
+                    <span>返回顶部</span>
+                </a>
+            </li>    
+         </ul>
+
+     </section>
+     <!--登录.注册.返回顶部 ED-->
+  
+<!--底部文字 手机下载APP ST-->
+<section class="textapp clearfix">
+	<div class="text">
+	<span ><a href="#" class="textred">手机app下载</a></span>
+	<span><a href="#">慢慢买手机版</a></span>
+	<span><a href="#" class="textgary">--掌上比价平台</a></span>
+	</div>
+	<div class="manmanmai">m.manmanbuy.com</div>
+	
+
+</section>
+<!--底部文字 手机下载APP ED-->
+
+<!--渲染模板-->
+
+<script id = "nav" type="text/html">
+
+
+	{{each result as value}}
+	<li data-id={{value.titleId}}>{{value.title}}</li>
+	{{/each}}
+				
+</script>
+
+
+<!--渲染列表-->
+<script id="tpl" type="text/html">
+{{each result as i}}
+	<div class="conpre">
+		{{#i.productImg}}
+		
+		<div class="litext">
+			<span class="b">{{#i.productName}}</span>
+			<div class="youhui">{{#i.productPrice}}</div>
+		</div>
+		{{#i.productCouponRemain}}
+		<div class="btnanniu">
+			{{#i.productCoupon}}
+			{{#i.productHref}}
+		</div>
+	</div>
+{{/each}}
+</script>
+<script>
+	function clickme(){
+		console.log(this);
+	}
+</script>
+<script type="text/javascript" src="js/baicaijia.js"></script>
+</body>
+</html>

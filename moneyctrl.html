@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!--头部标题ST-->
+    <header class="mmp">
+             <div class="return"><a href="index.html"></a></div>
+           <h2>省钱控-最新优惠信息</h2>
+       
+        <div class="app">
+            <img src="images/header_app.png" alt="">
+        </div>
+    </header>
+    <!--头部标题ED-->
+
+
+      <!--折扣商品列表 ST-->
+    <section class="sale">
+        <ul id="onsale">
+            <!--<li class="item">
+                <a href="#" class="clearfix">
+                    <div class="i-left f-left">
+                        <img src="http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt=\"移动端凑单品：海天 鲜味 生抽 1.28L\">
+                    </div>
+                    <div class="i-right f-left">
+                        <h4>移动端凑单品：海天 鲜味 生抽 1.28L<span class="price">10.9元</span></h4>
+                        <span>京东商城 | 10-25 14:10</span>
+                        <span>有1人评论</span>
+                    </div>
+                </a>
+            </li>-->
+         
+          
+        
+        </ul>
+
+     </section>
+     <!--折扣商品列表 ED-->
+
+
+    <!--返回顶部 ST-->
+    <i class="moveTop iconfont icon-fanhuidingbu"><a href="#"></a></i>
+    <!--返回顶部 ED-->
+    
+<!--底部文字 手机下载APP ST-->
+     <section class="textapp">
+         <div class="text">
+            <span ><a href="#" class="textred">手机app下载</a></span>
+            <span><a href="#">慢慢买手机版</a></span>
+            <span><a href="#" class="textgary">--掌上比价平台</a></span>
+         </div>
+         <div class="manmanmai">m.manmanbuy.com</div>
+         
+        
+     </section>
+     <!--底部文字 手机下载APP ED-->
+
+
+   
+  
+    
+
+
+
+<script src="js/moneyctrl.js"></script>
+
+  <!--渲染列表信息-->
+    <script id="tpll" type="text/html">
+       {{each result as value}}
+        <li class="item"  class="clearfix">
+            <a href="moneyproduct.html?productid={{value.productId}}" class="clearfix">
+                <div class="i-left f-left">
+                   {{#value.productImgSm}}
+                </div>
+                <div class="i-right f-left">
+                    <h4>{{value.productName}}<span class="price">{{value.productPinkage}}</span></h4>
+                    <span>{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="num">{{value.productComCount}}</span>
+                </div>
+            </a>
+        </li>
+        
+        {{/each}}   
+ 
+        <div class="bt">
+                <button value="" class="upPage page">上一页</button>
+                <select name="" id="" class="sel">
+                    <!--<option value="1">{{pageid}}/{{totalpage}}</option>-->
+                </select>
+                <button value="" class="downPage page">下一页</bottom>
+            </div>
+           
+    </script>
+
+</body>
+
+</html>

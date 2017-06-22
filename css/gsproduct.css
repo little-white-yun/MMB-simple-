@@ -1,0 +1,260 @@
+@charset "utf-8";
+/*------------- S reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f7f7f7;
+  color: #5a5a5a;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*在移动端特殊的设置*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+ins,
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+a:hover {
+  color: #5a5a5a;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+/*------------- E  reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+/*------------- S common css  也就是我们公用的css -------------*/
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.w33 {
+  width: 33.3333%;
+}
+.w50 {
+  width: 50%;
+}
+.iconnone {
+  display: none;
+}
+/*------------- E common css  也就是我们公用的css -------------*/
+/*-------------- S 字体图标库 -------------*/
+@font-face {
+  font-family: "miconfont";
+  src: url('../font/miconfont.eot?t=1480476053297');
+  /* IE9*/
+  src: url('../font/miconfont.eot?t=1480476053297#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/miconfont.woff?t=1480476053297') format('woff'), /* chrome, firefox */ url('../font/miconfont.ttf?t=1480476053297') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/miconfont.svg?t=1480476053297#miconfont') format('svg');
+  /* iOS 4.1- */
+}
+.micon {
+  font-family: 'miconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.micon-arrow::before {
+  content: '\e65e';
+}
+.micon-arrow::before {
+  content: '\e65f';
+}
+/*------------ 凑单品地址部分 ST ------------*/
+.locat {
+  background-color: #fff;
+}
+.locat .zone {
+  border-bottom: 1px solid #dddddd;
+}
+.locat .zone .origin {
+  float: left;
+  width: 2.93326rem;
+  height: 100%;
+  text-align: center;
+  line-height: 0.973309rem;
+  font-size: 0.453322rem;
+}
+.locat .zone .origin i {
+  display: inline-block;
+  font-size: 0.39999rem;
+}
+.locat .zone .ormessage {
+  top: 0rem;
+}
+.locat .zone .ormessage ul {
+  border-top: 1px solid #ddd;
+  margin-top: 0.973309rem;
+}
+.locat .zone .ormessage ul li {
+  font-size: 0.373324rem;
+  padding-left: 0.53332rem;
+  line-height: 0.79998rem;
+  border-bottom: 1px solid #ddd;
+}
+.locat .zone .ormessage ul li span {
+  display: inline-block;
+  width: 8.39979rem;
+}
+.locat .zone .ormessage ul li i {
+  font-size: 0.639984rem;
+  color: red;
+}
+.locat .iconimg {
+  float: left;
+  font-size: 0.93331rem;
+  line-height: 0.973309rem;
+}
+/*------------ 凑单品地址部分 ED ------------*/
+/*------------ 单品部分内容 ST ------------*/
+.monovalent {
+  padding-left: 0.159996rem;
+}
+.monovalent .univalence {
+  width: 4.759881rem;
+  height: 7.9998rem;
+  background-color: #fff;
+  margin: 0.159996rem 0.159996rem 0 0;
+  float: left;
+  padding: 0.159996rem;
+}
+.monovalent .univalence img {
+  width: 100%;
+}
+.monovalent .univalence p {
+  font-size: 0.319992rem;
+  color: #000;
+}
+.monovalent .univalence span {
+  font-size: 0.319992rem;
+  color: #f73d1f;
+  line-height: 0.706649rem;
+  margin-top: 0.39999rem;
+}
+.monovalent .univalence input {
+  width: 1.573294rem;
+  height: 0.706649rem;
+  font-size: 0.319992rem;
+  color: #fff;
+  background-color: #ff9501;
+  border: 1px solid #ff8100;
+  border-radius: 0.079998rem;
+  margin-top: 0.199995rem;
+}
+/*------------ 单品部分内容 ED ------------*/

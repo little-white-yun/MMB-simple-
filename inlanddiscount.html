@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/inlanddiscount.css">
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!--头部标题ST-->
+    <header class="mmp">
+            <div class="return"><a href="index.html"></a></div>
+           <h2>国内折扣</h2>
+       
+        <div class="app">
+            <img src="images/header_app.png" alt="">
+        </div>
+    </header>
+    <!--头部标题ED-->
+
+    <!--国内折扣商品列表 ST-->
+    <section class="domestic clearfix">
+        <div class="discount">
+            <ul class="count">
+                <!--<li class="abatement">
+                    <a href="discount.html?productid=0" title="《皮囊》 19.9元">
+                        <div class="img"><img src="http://img10.360buyimg.com/n7/jfs/t1720/256/513904188/195330/ce31e971/55d2cf3eNc2d117d0.jpg" alt="西域美农新疆特产五星和田红枣250g*2"></div>
+                            <div class="title">西域美农新疆特产五星和田红枣250g*2</div>
+                            <div class="quotation">19.8元(5件99元)</div>
+                            <div class="info">
+                            <div class="while">京东商城 | 10-22 13:28</div>
+                        </div>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+       
+    </section>
+    
+    <!--国内折扣商品列表 ED-->
+
+
+
+
+
+
+<!--登录.注册.返回顶部 ST-->
+     <section class="message clearfix">
+         <ul>
+            <li><a href="">登录</a></li>
+            <li class="borsty"><a href="" >注册</a></li>
+            <li class="lastli">
+                <a href="">
+                    <span class="top"></span>
+                    <span>返回顶部</span>
+                </a>
+            </li>    
+         </ul>
+
+     </section>
+     <!--登录.注册.返回顶部 ED-->
+  
+<!--底部文字 手机下载APP ST-->
+     <section class="textapp clearfix">
+         <div class="text">
+            <span ><a href="#" class="textred">手机app下载</a></span>
+            <span><a href="#">慢慢买手机版</a></span>
+            <span><a href="#" class="textgary">--掌上比价平台</a></span>
+         </div>
+         <div class="manmanmai">m.manmanbuy.com</div>
+         
+        
+     </section>
+     <!--底部文字 手机下载APP ED-->
+
+
+   
+  
+    
+
+
+
+<script src="js/inlanddiscount.js"></script>
+
+<script type="text/html" id="tpl">
+{{each result as i}}
+  
+        <li class="abatement">
+            <a href="discount.html?productid={{i.productId}}">
+                <div class="img">{{#i.productImg}}</div>
+                    <div class="title">{{i.productName}}</div>
+                    <div class="quotation">{{i.productTime}}</div>
+                    <div class="info">
+                    <div class="while">{{i.productFrom}} | {{i.productTime}}</div>
+                </div>
+            </a>
+        </li>
+            
+{{/each}}
+</script>
+</body>
+
+</html>

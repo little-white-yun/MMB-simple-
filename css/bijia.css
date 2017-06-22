@@ -1,0 +1,305 @@
+@charset "utf-8";
+/*------------- S reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+html {
+  background: #fff;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html * {
+  outline: 0;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  /*设置所有的盒子的宽度以边框开始计算*/
+  -webkit-box-sizing: border-box;
+  /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+  box-sizing: border-box;
+}
+html,
+body {
+  background: #f7f7f7;
+  color: #5a5a5a;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  /*在移动端特殊的设置*/
+}
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+del {
+  text-decoration: line-through;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+  font-style: normal;
+  font-weight: 500;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: 500;
+}
+ins,
+a {
+  text-decoration: none;
+  color: #5a5a5a;
+}
+a:hover {
+  color: #5a5a5a;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  /*特殊的属性定义  清除浏览器给input自带的样式*/
+  -webkit-appearance: none;
+  /*组件默认的样式空*/
+}
+/*------------- E  reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致 -----------------*/
+/*------------- S common css  也就是我们公用的css -------------*/
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+.clearfix::after,
+.clearfix::before {
+  content: ".";
+  line-height: 0;
+  height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both;
+}
+.w33 {
+  width: 33.3333%;
+}
+.w50 {
+  width: 50%;
+}
+.iconnone {
+  display: none;
+}
+/*------------- E common css  也就是我们公用的css -------------*/
+/*-------------- S 字体图标库 -------------*/
+@font-face {
+  font-family: "miconfont";
+  src: url('../font/miconfont.eot?t=1480476053297');
+  /* IE9*/
+  src: url('../font/miconfont.eot?t=1480476053297#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/miconfont.woff?t=1480476053297') format('woff'), /* chrome, firefox */ url('../font/miconfont.ttf?t=1480476053297') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/miconfont.svg?t=1480476053297#miconfont') format('svg');
+  /* iOS 4.1- */
+}
+.micon {
+  font-family: 'miconfont' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.micon-arrow::before {
+  content: '\e65e';
+}
+.micon-arrow::before {
+  content: '\e65f';
+}
+/*------------ 商品内容页 ST ------------*/
+.substance .tan {
+  position: relative;
+  padding: 0.53332rem;
+  text-align: center;
+}
+.substance .tan h2 {
+  display: inline-block;
+  font-size: 0.426656rem;
+  color: #000;
+}
+.substance .tan .shopImg {
+  margin-top: 1.99995rem;
+  float: right;
+  bottom: 0px;
+}
+.substance .tan .shopImg img {
+  width: 1.039974rem;
+  height: 1.039974rem;
+}
+.substance .contents {
+  margin-top: 0.519987rem;
+}
+.substance .contents ul {
+  width: 100%;
+  height: 0.866645rem;
+}
+.substance .contents ul li {
+  float: left;
+  width: 33.3%;
+  height: 0.839979rem;
+  border: 1px solid #af310b;
+  font-size: 0.373324rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0.839979rem;
+  background-color: #ffc31c;
+  color: #fff;
+}
+.substance .contents ul .buy {
+  background-color: #ff9812;
+}
+.substance .jd {
+  border-bottom: 1px solid #c1c1c1;
+  width: 100%;
+  position: relative;
+}
+.substance .jd .jdicon {
+  width: 100%;
+  height: 1.19997rem;
+  font-size: 0.426656rem;
+  padding-left: 0.199995rem;
+  line-height: 1.173304rem;
+}
+.substance .jd .jdicon .red {
+  color: #cb0000;
+  padding-right: 0.39999rem;
+}
+.substance .jd input {
+  width: 1.626626rem;
+  height: 0.639984rem;
+  font-size: 0.346658rem;
+  color: #fff;
+  border-radius: 0.119997rem;
+  background-color: #ff5500;
+  float: right;
+  position: absolute;
+  top: 0.26666rem;
+  right: 0px;
+}
+.substance .jd .text {
+  font-size: 0.306659rem;
+  padding: 0.293326rem 0.679983rem 0.453322rem 0.26666rem;
+  color: #85838a;
+  border-top: 1px solid #85838a;
+  border-bottom: 6px solid #767676;
+}
+.substance .ease {
+  font-size: 0.346658rem;
+  color: #000;
+  background-color: #dbdbdb;
+  line-height: 0.866645rem;
+  text-align: center;
+  margin-top: 0.026666rem;
+}
+/*------------ 商品内容页 ED ------------*/
+/*------------ 网友评价 ST ------------*/
+.estimate .message {
+  height: 1.59996rem;
+  width: 100%;
+  font-size: 0.359991rem;
+}
+.estimate .message .namemes {
+  margin-top: 0.466655rem;
+  margin-left: 0.26666rem;
+}
+.estimate .message .datatext {
+  width: 2.906594rem;
+  height: 0.839979rem;
+  padding: 0.426656rem 0.26666rem 0 0;
+}
+.estimate .message .datatext p {
+  display: inline-block;
+  folat: right;
+}
+.estimate .evaluate {
+  font-size: 0.319992rem;
+  padding: 0 0.306659rem 0.159996rem 0.293326rem;
+  border-bottom: 1px solid #c1c1c1;
+  color: #000;
+}
+/*------------ 网友评价 ED ------------*/
+/*------------ 查看更多评价 ST ------------*/
+.more {
+  line-height: 1.933285rem;
+  text-align: center;
+}
+.more input {
+  width: 9.573094rem;
+  height: 0.839979rem;
+  font-size: 0.373324rem;
+  color: #000;
+  border-radius: 0.13333rem;
+  background: linear-gradient(to bottom, #efefef, #d6d6d6);
+  border-bottom: 1px solid #c5c5c5;
+}
+/*------------ 查看更多评价 ED ------------*/

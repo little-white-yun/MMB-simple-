@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!--头部标题ST-->
+    <header class="mmp">
+        <div class="logo">
+            <img src="images/header_logo.png" alt="">
+        </div>
+        <div class="app">
+            <img src="images/header_app.png" alt="">
+        </div>
+    </header>
+    <!--头部标题ED-->
+
+    <!--搜索部分 ST-->
+    <section class="find">
+        <div class="search">
+            <input type="text" name="" value="请输入你想比价的商品" class="inp">
+            <input type="button" value="搜索" class="btn">
+        </div>
+        <!--灰色小条 ST-->
+        <div class="bar"></div>
+        <!--灰色小条 ED-->
+    </section>
+     <!--搜索部分 ED-->
+
+
+     <!--菜单栏图标部分 ST-->
+     <section class="buymenu">
+        <!--<div class="buyicon">
+            <div class="icon">
+                <img src="images/ic_cu.png" alt="">
+                <span>比价搜索</span>
+            </div>
+        </div>-->
+     
+
+        
+      
+
+     </section>
+     <!--菜单栏图标部分 ED-->
+
+
+     <!--超值折扣 ST-->
+     <section class="discount">
+         <div class="bar"></div>
+         <div class="commonbar">
+             <h2>超值折扣推荐</h2>
+            <div class="icon"></div>
+         </div>
+        
+     </section>
+     <!--超值折扣 ED-->
+
+     <!--折扣商品列表 ST-->
+    <section class="sale">
+        <ul id="onsale">
+            <!--<li class="item"  class="clearfix">
+                <a href="#">
+                    <div class="i-left f-left">
+                        <img src="http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt=\"移动端凑单品：海天 鲜味 生抽 1.28L\">
+                    </div>
+                    <div class="i-right f-left">
+                        <h4>移动端凑单品：海天 鲜味 生抽 1.28L<span class="price">10.9元</span></h4>
+                        <span>京东商城 | 10-25 14:10</span>
+                        <span>有1人评论</span>
+                    </div>
+                </a>
+            </li>-->
+        </ul>
+
+     </section>
+     <!--折扣商品列表 ED-->
+
+     <!--更多登录信息 ST-->
+     <section class="anymore">
+         <a href="moneyctrl.html"><input type="bottom" value="更多优惠信息>>"></a>
+     </section>
+     <!--更多登录信息 ED-->
+
+
+     <!--品牌排行 ST-->
+     <section class="brand">
+         <div class="bar"></div>
+         <div class="commonbar">
+              <h2>品牌排行</h2>
+             <div class="icon"></div>
+         </div>
+       
+     </section>
+     <!--品牌排行 ED-->
+
+
+     <!--登录.注册.返回顶部 ST-->
+     <section class="message">
+         <ul>
+            <li><a href="">登录</a></li>
+            <li class="borsty"><a href="" >注册</a></li>
+            <li class="lastli">
+                <a href="">
+                    <span class="top"></span>
+                    <span>返回顶部</span>
+                </a>
+            </li>    
+         </ul>
+
+     </section>
+     <!--登录.注册.返回顶部 ED-->
+     
+
+     <!--底部文字 手机下载APP ST-->
+     <section class="textapp">
+         <div class="text">
+            <span ><a href="#" class="textred">手机app下载</a></span>
+            <span><a href="#">慢慢买手机版</a></span>
+            <span><a href="#" class="textgary">--掌上比价平台</a></span>
+         </div>
+         <div class="manmanmai">m.manmanbuy.com</div>
+         
+        
+     </section>
+     <!--底部文字 手机下载APP ED-->
+  
+    <script src="js/index.js"></script> 
+    
+    <!--渲染图标-->
+    <script id="tpl" type="text/html">
+         {{each result as i  }}
+        <div class="buyicon">
+            <a href="{{i.titlehref}}">
+                <div class="icon">
+                    {{#i.img}}
+                    <p>{{i.name}}</p>
+                </div>
+            </a>
+        </div>  
+        {{/each}}
+    </script>  
+
+
+    <!--渲染列表信息-->
+    <script id="tpll" type="text/html">
+       {{each result as value}}
+        <li class="item"  class="clearfix">
+            <a href="moneyproduct.html?productid={{value.productId}}" class="clearfix">
+                <div class="i-left f-left">
+                   {{#value.productImgSm}}
+                </div>
+                <div class="i-right f-left">
+                    <h4>{{value.productName}}<span class="price">{{value.productPinkage}}</span></h4>
+                    <span>{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="num">{{value.productComCount}}</span>
+                </div>
+            </a>
+        </li>
+    {{/each}}
+    </script>
+
+</body>
+
+</html>

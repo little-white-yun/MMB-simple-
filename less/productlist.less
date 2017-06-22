@@ -1,0 +1,80 @@
+@import "./basex";
+
+
+
+/*------------ 比价商品信息 ST ------------*/
+
+//折扣商品列表样式
+.sale{
+    .item{
+        width:100%;
+        border-bottom:1px solid @line-color;
+        // margin-bottom:20*@rem;
+        padding:30*@rem 15*@rem ;
+        a{
+            display:block;
+        }
+        .i-left{
+            height:203*@rem;
+            width:203*@rem;
+            img{
+                height:203*@rem;
+                width:203*@rem;
+            }
+        }
+        .i-right{
+             width:502*@rem;
+            //  margin-left:25*@rem;
+             position:relative;
+            h4{
+                .font-size(20);
+                font-weight:bold;
+                .price{
+                    color:@price-color;
+                }
+            }
+             .price {
+                color:#e72800;
+                font-size:26*@rem;
+                font-weight:bold;
+                margin-top:32*@rem;
+            }
+            .comment {
+                width:232*@rem;
+                height:31*@rem;
+                font-size:24*@rem;
+                position:absolute;
+                bottom:-40*@rem;
+                left:0px;
+                
+                
+                .pricenum {
+                    margin-top:0px;
+                }
+                .comment1 {
+                   margin-top:0px;
+                   font-size:24*@rem;
+                   color:#99979b;
+                   padding-left:18*@rem;
+                }
+            }
+            span {
+                font-size:24*@rem;
+                color:#99979b;
+                display: inline-block;
+                margin-top:0px;
+
+            }
+            
+            :nth-child(3),{
+                 font-size:24*@rem;
+                 color:#99979b;
+            }
+         
+
+        }
+    }
+}
+
+
+/*------------ 比价商品信息 ED ------------*/

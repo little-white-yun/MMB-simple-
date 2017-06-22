@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="lib/flexible/flexible.js"></script>
+    <script src="lib/flexible/flexible_css.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/template.js"></script>
+    <link rel="stylesheet" href="css/basex.css">
+    <link rel="stylesheet" href="css/brandTitle.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!--头部标题ST-->
+    <header class="mmp">
+        <div class="logo">
+            <img src="images/header_logo.png" alt="">
+        </div>
+        <div class="app">
+            <img src="images/header_app.png" alt="">
+        </div>
+    </header>
+    <!--头部标题ED-->
+
+    <!--搜索部分 ST-->
+    <section class="find">
+        <div class="search">
+            <input type="text" name="" value="请输入你想比价的商品" class="inp">
+            <input type="button" value="搜索" class="btn">
+        </div>
+      
+    </section>
+     <!--搜索部分 ED-->
+
+
+    <!--链接标题样式 ST-->
+    <section class="titsty">
+        <div class="headline">
+            <p><a href="index.html">首页</a> > 全部分类 ></p>
+        </div>
+        <div class="seniority">
+            <span>热门品牌分类</span>
+        </div>
+    </section>
+   
+
+
+    
+    
+    <!--链接标题样式 ED-->
+
+     <!--商品列表样式-->
+     <section class="shoplist">
+         <!--<ul class = "commodity">
+             <li class="shoptitle">
+                 <a href="#">大家电</a>
+                 <div class="icon"></div>
+                 <ul class="article">
+                    <li>电视</li>
+                    <li>电视</li>
+                    <li>电视</li>
+                    <li>DVD</li>
+                    <li>电视</li>
+                    <li>电视</li>
+                    <li>电视电视电视</li>
+                    <li>电视点</li>
+                    <li>电视电视</li>
+                    <li>电视电视</li>
+                 </ul>
+             </li>
+         </ul>-->
+     </section>
+     
+
+
+
+
+
+  <!--登录.注册.返回顶部 ST-->
+     <section class="message" style="margin-top:40px">
+         <ul>
+            <li><a href="">登录</a></li>
+            <li class="borsty"><a href="" >注册</a></li>
+            <li class="lastli">
+                <a href="">
+                    <span class="top"></span>
+                    <span>返回顶部</span>
+                </a>
+            </li>    
+         </ul>
+
+     </section>
+     <!--登录.注册.返回顶部 ED-->
+     <!--底部文字 手机下载APP ST-->
+     <section class="textapp">
+         <div class="text">
+            <span ><a href="#" class="textred">手机app下载</a></span>
+            <span><a href="#">慢慢买手机版</a></span>
+            <span><a href="#" class="textgary">--掌上比价平台</a></span>
+         </div>
+         <div class="manmanmai">m.manmanbuy.com</div>
+         
+        
+     </section>
+     <!--底部文字 手机下载APP ED--> 
+
+   
+</body>
+<script src= "js/brandTitle.js"></script>
+
+
+<!--渲染商品-->
+<!--渲染图标-->
+<script id="tpl" type="text/html">
+        {{each result as i  }}
+     <ul class = "commodity clearfix">
+             <li class="shoptitle" title="{{i.titleId}}">
+                 <a href="brand.html?brandTitleId={{i.brandTitleId}}">{{i.brandTitle}}</a>
+                 <div class="icon"></div>
+                 
+             </li>
+            
+         </ul>
+    {{/each}}
+</script> 
+
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="lib/flexible/flexible.js"></script>
+<script src="lib/flexible/flexible_css.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/template.js"></script>
+<script src="lib/iscroll/iscroll.js"></script>
+<link rel="stylesheet" href="font/iconfont.css">
+<link rel="stylesheet" href="css/basex.css">
+<link rel="stylesheet" href="css/common.css">
+<link href="css/couponproduct.css" rel="stylesheet" type="text/css">
+<title>白菜价</title>
+
+</head>
+<body>
+
+
+<!--头部标题ST-->
+<header class="mmp" style="background:#f4483e">
+		<div class="return"><a href="coupon.html"></a></div>
+		<h2>肯德基优惠券</h2>
+	
+	<div class="app">
+		<img src="images/header_app.png" alt="">
+	</div>
+</header>
+<!--头部标题ED-->
+
+
+
+
+<!--优惠券列表 ST-->
+<p class="order">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+<section class="favourable">
+   <!--<div class="preferential clearfix">
+       <a href=""class="liher">
+        <img src="http://image1.juanlaoda.com/AdminImageUpload/5816792xixik_byh_1a2c77af03cdd022.jpg" alt="">
+        <div class="favlist">
+            <h3>C28  分享两人餐 新奥尔良烤鸡腿堡+香辣鸡腿堡+新奥尔良烤翅2块+大薯条+百事可乐(中)+雪顶咖啡 2016年10月凭肯德基优惠券</h3>
+            <span>￥ 28</span>
+            <p>有效期至10月31日</p>
+        </div>
+        <div class="rigth">
+             <a href="#" class="clearfix helist">
+                <img src="images/icon_bar2.png" alt="">
+            </a>
+        </div>
+       </a>
+   </div>-->
+</section>
+
+
+<!--优惠券列表 ED-->
+
+
+<!--大图片 ST-->
+<section class="bigImg hidden">
+<div class="bgi">
+    
+</div>
+<div class="content">
+    <img class="mesimg"></img>
+    <i class="iconfont icon-shangyizhang"></i>
+    <i class="iconfont icon-xiayizhang"></i>    
+</div>
+  
+   
+    
+</section>
+
+
+<!--大图片 ED-->
+
+
+<!--登录.注册.返回顶部 ST-->
+     <section class="message clearfix">
+         <ul>
+            <li><a href="">登录</a></li>
+            <li class="borsty"><a href="" >注册</a></li>
+            <li class="lastli">
+                <a href="">
+                    <span class="top"></span>
+                    <span>返回顶部</span>
+                </a>
+            </li>    
+         </ul>
+
+     </section>
+     <!--登录.注册.返回顶部 ED-->
+  
+<!--底部文字 手机下载APP ST-->
+<section class="textapp clearfix">
+	<div class="text">
+	<span ><a href="#" class="textred">手机app下载</a></span>
+	<span><a href="#">慢慢买手机版</a></span>
+	<span><a href="#" class="textgary">--掌上比价平台</a></span>
+	</div>
+	<div class="manmanmai">m.manmanbuy.com</div>
+	
+
+</section>
+<!--底部文字 手机下载APP ED-->
+<script type="text/javascript" src="js/couponproduct.js"></script>
+
+<script type="text/html" id="tpl">
+      {{each result as i}}
+      <div class="preferential">
+           <a href="#"class="liher">
+                {{#i.couponProductImg}}
+                <div class="favlist">
+                    <h3>{{i.couponProductName}}</h3>
+                    <span>￥ 28</span>
+                    <p>{{i.couponProductTime}}</p>
+                </div>
+                <div class="rigth">
+                    <a href="#" class="clearfix helist">
+                        <img src="images/icon_bar2.png" alt="">
+                    </a>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+</script>
+
+</body>
+</html>
